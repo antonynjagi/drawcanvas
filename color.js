@@ -1,8 +1,9 @@
 var colors = ['black', 'grey', 'white', 'red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet', 'purple', 'magenta', 'brown'];
+var swatches = document.getElementsByClassName('swatch');
 var colorSelect = document.getElementById('colorSelect');
 
 // Create color swatches for larger screens
-for (var f = 0; f < colors.length; f++) {
+for (var f = 0, g = colors.length; f < g; f++) {
     var swatch = document.createElement('div');
     swatch.className = 'swatch';
     swatch.style.backgroundColor = colors[f];
@@ -11,7 +12,7 @@ for (var f = 0; f < colors.length; f++) {
 }
 
 // Populate the combo box for smaller screens
-for (var f = 0; f < colors.length; f++) {
+for (var f = 0, g = colors.length; f < g; f++) {
     var option = document.createElement('option');
     option.value = colors[f];
     option.textContent = colors[f];
