@@ -1,0 +1,81 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+#toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eee;
+    padding: 10px;
+}
+
+#rad {
+    display: flex;
+    align-items: center;
+}
+
+#colors, #colorSelect {
+    display: flex;
+    align-items: center;
+}
+
+#colors .swatch {
+    width: 20px;
+    height: 20px;
+    margin: 2px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+#colors .swatch.active {
+    border: 2px solid #000;
+}
+
+#canvas {
+    border: 1px solid #ccc;
+    width: 100%;
+    height: calc(100% - 50px); /* Adjust height according to toolbar */
+}
+
+#colorSelect {
+    width: 150px;
+}
+
+#colorSelect option {
+    background-color: white; /* Default background color for options */
+}
+
+/* Style individual options by color */
+option[value="black"] { background-color: black; color: white; }
+option[value="grey"] { background-color: grey; color: white; }
+option[value="white"] { background-color: white; color: black; }
+option[value="red"] { background-color: red; color: white; }
+option[value="orange"] { background-color: orange; color: black; }
+option[value="yellow"] { background-color: yellow; color: black; }
+option[value="green"] { background-color: green; color: white; }
+option[value="blue"] { background-color: blue; color: white; }
+option[value="indigo"] { background-color: indigo; color: white; }
+option[value="violet"] { background-color: violet; color: white; }
+option[value="purple"] { background-color: purple; color: white; }
+option[value="magenta"] { background-color: magenta; color: white; }
+option[value="brown"] { background-color: brown; color: white; }
+
+@media (max-width: 600px) {
+    #colors {
+        display: none;
+    }
+
+    #colorSelect {
+        display: block;
+    }
+}
+
+@media (min-width: 601px) {
+    #colorSelect {
+        display: none;
+    }
+}
