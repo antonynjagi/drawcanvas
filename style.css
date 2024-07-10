@@ -3,6 +3,7 @@ body, html {
     padding: 0;
     height: 100%;
     font-family: Arial, sans-serif;
+    overflow: hidden; /* Prevent scrolling */
 }
 
 #toolbar {
@@ -11,6 +12,7 @@ body, html {
     align-items: center;
     background-color: #eee;
     padding: 10px;
+    box-sizing: border-box;
 }
 
 #rad {
@@ -36,10 +38,33 @@ body, html {
 }
 
 #canvas {
-    border: 1px solid #ccc;
+    display: block;
     width: 100%;
     height: calc(100% - 50px); /* Adjust height according to toolbar */
 }
+
+#colorSelect {
+    width: 150px;
+}
+
+#colorSelect option {
+    background-color: white; /* Default background color for options */
+}
+
+/* Style individual options by color */
+option[value="black"] { background-color: black; color: white; }
+option[value="grey"] { background-color: grey; color: white; }
+option[value="white"] { background-color: white; color: black; }
+option[value="red"] { background-color: red; color: white; }
+option[value="orange"] { background-color: orange; color: black; }
+option[value="yellow"] { background-color: yellow; color: black; }
+option[value="green"] { background-color: green; color: white; }
+option[value="blue"] { background-color: blue; color: white; }
+option[value="indigo"] { background-color: indigo; color: white; }
+option[value="violet"] { background-color: violet; color: white; }
+option[value="purple"] { background-color: purple; color: white; }
+option[value="magenta"] { background-color: magenta; color: white; }
+option[value="brown"] { background-color: brown; color: white; }
 
 @media (max-width: 600px) {
     #colors {

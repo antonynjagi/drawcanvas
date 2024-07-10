@@ -36,3 +36,11 @@ var disengage =  function() { dragging = false;  context.beginPath(); }
 canvas.addEventListener('mousedown',engage);
 canvas.addEventListener('mousemove', putPoint);
 canvas.addEventListener('mouseup',disengage);
+canvas.addEventListener('mouseleave', disengage);
+
+
+// Add touch events
+canvas.addEventListener('touchstart', engageTouch);
+canvas.addEventListener('touchmove', drawTouch);
+canvas.addEventListener('touchend', disengage);
+canvas.addEventListener('touchcancel', disengage);
